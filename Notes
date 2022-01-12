@@ -1,0 +1,98 @@
+Research)
+    Average generation from 1w in a year. *I think 0.85
+    How pitch and orientation makes generation different
+
+
+
+0 Degree = 7,448 -- 
+5 Degree = 7,736 -- + 288
+10 Degree = 7,984 -- + 248
+15 Degree = 8,191 -- + 207
+20 Degree = 8,355 -- +144
+25 Degree = 8,474 -- +139
+30 Degree = 8,548 -- +74
+35 Degree = 8,576 ---- PEAK -- +28
+40 Degree = 8,559 -- -17
+45 Degree = 8,495 -- -64
+50 Degree = 8,388 -- -107
+55 Degree = 8,237 -- -151
+60 Degree = 8,044 -- -193
+
+
+35 Degree 9kw - 7,719
+30 Degree 9kw - 7,693
+
+
+Other Ideas.
+
+- Electricty advice generator
+- Response email generator
+- bill calculator (contract rate x kw usage + 365 * standing rate)/12
+
+
+
+estimate quote tool
+
+Scaffold = 672
+Scaffold 3Sx2 = 1040
+Scaffold 3Sx3 = 1407
+
+slate = +220
+london = 184
+
+
+Panels
+lg 440 = 399 
+JA 455 = 242
+
+
+
+
+Batteries
+fox2.6 = 1123
+
+Sunsynk5 = 1964
+huawei5 = 3433
+
+Sunsynk10 = 4557
+huawei10 = 6707
+
+
+pv only inverters
+solis1 = 336
+solis2 = 420
+solis3 = 473
+solis3.6 = 578
+solis5 = 683
+solis8 = 966
+
+
+solaredge3.6 = 914
+solaredge5 = 1019
+solarEdge8 = 1533
+
+optimizers = 42
+
+
+
+
+
+
+
+
+
+
+
+Hybrid inverters
+fox3.6 = 1144
+sunsynk3.6 = 1228
+Huawei3.6 = 892
+
+sunsynk5 = 1365
+Huawei5 = 1050
+
+sunsynk8 = 2859
+Huawei6 = 1144
+
+
+

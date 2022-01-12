@@ -1,1 +1,1 @@
-# solarCalc21
+# solarCalc

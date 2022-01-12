@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"> -->
+		<link rel="stylesheet" href="style.css" />
+		<script src="script.js" defer></script>
+		<script src="measure.js" defer></script>
+		<script src="trueSize.js" defer></script>
+		<script src="estimate.js" defer></script>
+
+
+
+		<title>Solarality</title>
+	</head>
+	<body>
+		<section>
+			<div class="box">
+				<div class="calc-container">
+					<p class="link roof-link">Roof Calculator</p>
+					<p class="link gen-link">Generation Calculator</p>
+					<p class="link angle-link">Angle Calculator</p>
+					<p class="link estimate-link">Quote Estimator</p>
+					<p class="link return-link">Return Calculator</p>
+
+				</div>
+			</div>
+			<!-- <div class="update-container">
+				
+				<img class="adam happy" src="solarSanta.jpg"/>
+			</div> -->
+			<div class="gen-calc calc hide">
+				<fieldset>
+					<legend>Customer Info</legend>
+					<p>
+						<label for="annual">
+							<span>Annual kW*: </span>
+						</label>
+						<input type="number" id="annual" name="annualKW" placeholder="3400"/>
+						<span>---- or ----</span>
+						<label for="annual">
+							<span>Monthly bill: </span>
+						</label>
+						<input type="number" id="contract" name="contractK" placeholder="35" />
+						<span>Contract Rate: </span>
+						<input type="number" id="rate" name="rateKW" placeholder="0.18" />
+					</p>
+					<p>
+						<label for="max-system">
+							<span>Max System Size*: </span>
+						</label>
+						<input type="number" id="max-system" name="maxsystemsize" placeholder="4000"/>
+					</p>
+					<p>
+						<label for="kw10">
+							<span>Max Generation*: </span>
+						</label>
+						<input type="number" id="kw10" name="generation" placeholder="4500" />
+					</p>
+					<p>
+						<label for="overide">
+							<span>Prefered System Size: </span>
+						</label>
+						<input
+							type="number"
+							id="overide"
+							name="maxsystemsize"
+							placeholder="Not Required"
+						/>
+					</p>
+					<button class="button btn">Calculate</button>
+				</fieldset>
+
+				<fieldset class="results">
+					<legend>Results</legend>
+					<h4 class="title">Electricty Usage</h4>
+					<span class="usage container"
+						><span class="div1">Yearly Usage: ******kWh</span>
+						<span class="div2">Monthly Usage ****kWh:</span>
+						<span class="div3">Daily Usage: ****kWh </span></span
+					>
+					<h4 class="title">System</h4>
+					<span class="system container">
+						<span class="box1">Optimal System: ****kWp</span>
+						<span class="box2">System Chosen: ****kWp</span>
+						<span class="box3">Annual Generation: *****kWh </span>
+					</span>
+					<span class="figures">
+						<div class="section">
+							<div class="cont">
+								<h5 class="name name1"></h5>
+								<div class="month1"></div>
+								<span class="day1"></span>
+								<div class="gen1 gen"></div>
+							</div>
+							<div class="cont">
+								<h5 class="name name2"></h5>
+								<div class="month2"></div>
+								<div class="day2"></div>
+								<div class="gen2 gen"></div>
+							</div>
+							<div class="cont">
+								<h5 class="name name3"></h5>
+								<div class="month3"></div>
+								<div class="day3"></div>
+								<div class="gen3 gen"></div>
+							</div>
+						</div>
+						<div class="section">
+							<div class="cont">
+								<h5 class="name name4"></h5>
+								<div class="month4"></div>
+								<div class="day4"></div>
+								<div class="gen4 gen"></div>
+							</div>
+							<div class="cont">
+								<h5 class="name name5"></h5>
+								<div class="month5"></div>
+								<div class="day5"></div>
+								<div class="gen5 gen"></div>
+							</div>
+							<div class="cont">
+								<h5 class="name name6"></h5>
+								<div class="month6"></div>
+								<div class="day6"></div>
+								<div class="gen6 gen"></div>
+							</div>
+						</div>
+						<div class="section">
+							<div class="cont">
+								<h5 class="name name7"></h5>
+								<div class="month7"></div>
+								<div class="day7"></div>
+								<div class="gen7 gen"></div>
+							</div>
+							<div class="cont">
+								<h5 class="name name8"></h5>
+								<div class="month8"></div>
+								<div class="day8"></div>
+								<div class="gen8 gen"></div>
+							</div>
+							<div class="cont">
+								<h5 class="name name9"></h5>
+								<div class="month9"></div>
+								<div class="day9"></div>
+								<div class="gen9 gen"></div>
+							</div>
+						</div>
+						<div class="section">
+							<div class="cont">
+								<h5 class="name name10"></h5>
+								<div class="month10"></div>
+								<div class="day10"></div>
+								<div class="gen10 gen"></div>
+							</div>
+							<div class="cont">
+								<h5 class="name name11"></h5>
+								<div class="month11"></div>
+								<div class="day11"></div>
+								<div class="gen11 gen"></div>
+							</div>
+							<div class="cont">
+								<h5 class="name name12"></h5>
+								<div class="month12"></div>
+								<div class="day12"></div>
+								<div class="gen12 gen"></div>
+							</div>
+						</div>
+					</span>
+				</fieldset>
+			</div>
+			<div class="roof-calc calc hide">
+				<fieldset class='roof-split'>
+					<legend>Roof Info</legend>
+					<div>
+					<p>
+						<label for="panels">Panel:</label>
+						<select id="panels" name="panels">
+							<option value="Ja Solar 320W">JA Solar 320W Mono MBB Percium Half-Cell All Black MC4</option>
+							<option value="Ja Solar 330W">JA Solar 330W Mono MBB Percium Half-Cell All Black MC4</option>
+							<option value="Ja Solar 385W">JA Solar 385W Mono MBB Percium Half-Cell Black Short Frame MC4</option>
+							<option value="Ja Solar 400W">JA Solar 400W Mono PERC Half-Cell MBB Silver Frame</option>
+							<option value="Ja Solar 405W Silver">JA Solar 405W Mono MBB Percium Half-Cell Silver Frame QC4</option>
+							<option value="Ja Solar 405W Black">JA Solar 405W Mono PERC Half-Cell MBB Black Frame</option>
+							<option value="Ja Solar 450W">JA Solar 450W Mono MBB Percium Half-Cell Silver Frame QC4</option>
+							<option value="Ja Solar 455W">JA Solar 455W Mono MBB Percium Half-Cell Silver Frame MC4</option>
+							<option value="Q Cells 335W">Q Cells 335W Mono Q Peak Duo G9 All Black MC4</option>
+							<option value="Q Cells 380W">Q Cells 380W Mono Q Peak Duo BLK ML-G9 All Black MC4</option>
+							<option value="Canadian 420W">Canadian Solar 420W Super High Power Poly PERC HiKU with EVO2</option>
+							<option value="Viridian 320W">Viridian Clearline 320W Mono All Black BIPV</option>
+							<option value="Jinko 335W">Jinko 335W Mono Cheetah Half Cell BF B</option>
+							<option value="LG 380W">LG 380W Mono NeonH E6</option>
+							<option value="LG 440W">LG NeON H BiFacial 440W 144 Cell Mono 1500V</option>
+							<option value="REC 400W">REC Alpha Pure Series 400W All Black</option>
+						</select>
+					</p>
+					<p>
+						<label for="roof-height">
+							<span>Roof Height*: </span>
+						</label>
+						<input type="number" id="roof-height" name="roof-height" />
+					</p>
+					<p>
+						<label for="roof-width">
+							<span>Roof Width*: </span>
+						</label>
+						<input type="number" id="roof-width" name="roof-width" />
+					</p>
+					<p>
+						<label for="roof-type">Roof Type:</label>
+						<select id="roof-type" name="roof-type">
+							<option value="gable">Gable</option>
+							<option value="hip">Hip</option>
+							<option value="half-hip">Half Hip</option>
+						</select>
+					</p>
+					<p class="angle">
+						<label for="hip-angle">
+							<span>Hip Angle: </span>
+						</label>
+						<input type="number" id="hip-angle" name="hip-angle" />
+					</p>
+					<p>
+						<label for="orien">Orientation:</label>
+						<select id="orien" name="orien">
+							<option value="portrait">Portrait</option>
+							<option value="landscape">Landscape</option>
+						</select>
+					</p>
+					
+					<p>
+						<button class="roof-btn btn">Calculate</button>
+						<button class="all-btn btn">Try 'em All</button>
+					</p>
+				</div>
+				<div class='outer-box'><div class='side-box'></div></div>
+				</fieldset>
+				<fieldset class="results">
+					<legend>Results</legend>
+					<h4 class="title">System</h4>
+					<span class="usage container"
+					><span class="total">Total Panels:
+					</span>
+					<div class="panel-info"></div>
+					<span class="system-s">System Size:</span>
+					<span class="array">Array layout:</span></span
+					>
+					<h4 class="title">Spare Space</h4>
+					<span class="system container">
+						<div class="spare-top">Spare Space on Top:</div>
+						<div class="spare-side">Spare Space on Sides:</div>
+					</span>
+					<h4 class="title hide lay">Lay Out</h4>
+					<span class="extra container hide"> </span>
+				</fieldset>
+			</div>
+			<div class="angle-calc calc hide">
+				<fieldset>
+					<legend>Roof Info</legend>
+					<div class="angle-container">
+					<div class='angle-input-container'>
+					<label for="roof-width2">
+						<span>Total Roof Width*: </span>
+					</label>
+					<input type="number" id="roof-width2" name="roof-width2" />
+				</p>
+				<p>
+					<label for="roof-angle2">
+						<span>Roof Pitch*:</span>
+					</label>
+					<input type="number" id="roof-angle2" name="roof-angle2" />
+				</p>
+				<p><strong>Measurement Type:</strong></p>
+				<div>
+				<input type="radio" id="roof-pitch" name="angle" value="roof pitch"
+						checked>
+				<label for="roof-pitch">Roof Height</label>
+				</div>
+
+				<div>
+				<input type="radio" id="distance" name="angle" value="distance">
+				<label for="distance">Distance</label>
+				</div>
+				<div class="dist-inputs">
+					<div>
+					<label for="half-roof">
+						<span>Half Roof Width*: </span>
+					</label>
+					<input type="number" id="half-roof" name="half-roof" />
+				</div>
+				<div>
+					<label for="measurement">
+						<span>Measurement*: </span>
+					</label>
+					<input type="number" id="measurement" name="measurement" />
+				</div>
+				</div>
+				<button class="angle-btn btn">Calculate</button>
+				</div>
+				<div class="angle-result-container">
+				<div class="angle-result"></div>
+				<div class="angle-result2"></div>
+
+			</div>
+		</div>
+				</fieldset>
+			</div>
+			<div class="estimate-calc calc hide">
+			<fieldset class="esti-field">
+					<legend>System Info</legend>
+					<div>
+					<p>
+						<label for="pref-sy">Prefered System Size:</label>
+						<select id="pref-sy" name="pref-sy">
+							<option value="one">1kw</option>
+							<option value="two">2kw</option>
+							<option value="three">3kw</option>
+							<option value="four">4kw</option>
+							<option value="five">5kw</option>
+							<option value="six">6kw</option>
+							<option value="seven">7kw</option>
+							<option value="eight">8kw</option>
+					</select>
+					<p>
+						<p>
+							<label for="scaffold">Scaffolding:</label>
+							<select id="scaffold" name="scaffold">
+								<option value="none">None</option>
+								<option value="basic">Basic</option>
+								<option value="threeX2">3 Story 1/2 Face</option>
+								<option value="threeX3">3 Story 3 Face</option>
+						</select>
+						<p>
+						<p>Additions:</p>
+
+						<div>
+						  <input type="checkbox" id="slate" name="slate" value='yes'>
+						  <label for="slate">Slate</label>
+						</div>
+						
+						<div>
+						  <input type="checkbox" id="london" name="london">
+						  <label for="london">London</label>
+						</div>
+						<div>
+							<input type="checkbox" id="optimizer" name="optimizer">
+							<label for="optimizer">Optimizers</label>
+						  </div>
+					</p>
+					<button class="esti-btn btn">Estimate</button>
+				</div>
+				<div class='outer-box est-out'><div class='est-side-box2'></div><div class='est-side-box'></div></div>
+				</fieldset>
+			</div>
+			<div class="return-calc calc">
+				<fieldset class="esti-field">
+						<legend>Return Info</legend>
+						<div>
+							<label>Cost of System</label>
+							<input type="number" id="quote" name="quote" />
+							<br>
+							<br>
+							<label>First Year Saving</label>
+							<input type="number" id="saving" name="saving" />
+							<br>
+							<br>
+							<label>Scenario:</label>
+						<select class="scenario">
+							<option value='1'>No Inflation</option>
+							<option value="2">2% Inflation</option>
+							<option value="3">Average Inflation</option>
+					</select>
+					<br>
+					<br>
+							<button class = "quote-btn">Calculte</button>
+						</div>
+					</fieldset>
+					<fieldset >
+						<legend>Result</legend>
+						<div class="update-containers">
+						</div>
+						</fieldset>
+				</div>
+		</section>
+	</body>
+</html>
