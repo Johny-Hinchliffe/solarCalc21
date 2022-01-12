@@ -25,9 +25,8 @@ returnLink.addEventListener('click', function () {
 	angleBox.classList.add('hide')
 	estiBox.classList.add('hide')
 	roofBox.classList.add('hide')
-	update.classList.add('hide')
 	returnBox.classList.remove('hide')
-	return
+	console.log('clicked')
 })
 
 roofLink.addEventListener('click', function () {
@@ -35,7 +34,7 @@ roofLink.addEventListener('click', function () {
 	angleBox.classList.add('hide')
 	estiBox.classList.add('hide')
 	roofBox.classList.remove('hide')
-	update.classList.add('hide')
+
 	returnBox.classList.add('hide')
 })
 genLink.addEventListener('click', function () {
@@ -43,7 +42,6 @@ genLink.addEventListener('click', function () {
 	angleBox.classList.add('hide')
 	estiBox.classList.add('hide')
 	genBox.classList.remove('hide')
-	update.classList.add('hide')
 	returnBox.classList.add('hide')
 })
 angleLink.addEventListener('click', function () {
@@ -51,7 +49,6 @@ angleLink.addEventListener('click', function () {
 	genBox.classList.add('hide')
 	estiBox.classList.add('hide')
 	angleBox.classList.remove('hide')
-	update.classList.add('hide')
 	returnBox.classList.add('hide')
 })
 
@@ -60,7 +57,6 @@ estiLink.addEventListener('click', function () {
 	genBox.classList.add('hide')
 	angleBox.classList.add('hide')
 	estiBox.classList.remove('hide')
-	update.classList.add('hide')
 	returnBox.classList.add('hide')
 })
 

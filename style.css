@@ -296,13 +296,31 @@ fieldset {
 	justify-content: center;
 	flex-direction:column;
 }
-.est-side-box {
+.est-side-box{
 	display: flex;
 	align-items: center;
 	justify-content: center;
 	line-height: 1.6;
 }
 .est-side-box2 {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	
+}
+
+.ret-out{
+	width: 100%;
+	justify-content: center;
+	flex-direction:column;
+}
+.ret-side-box{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	line-height: 1.6;
+}
+.ret-side-box2 {
 	display: flex;
 	align-items: center;
 	justify-content: center;

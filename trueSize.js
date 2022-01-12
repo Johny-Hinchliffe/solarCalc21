@@ -10,7 +10,9 @@ const halfRoof = document.querySelector('#half-roof')
 const costOfSystem = document.querySelector('#quote')
 const firstYearSaving = document.querySelector('#saving')
 const quoteBtn = document.querySelector('.quote-btn')
-const container = document.querySelector('.update-containers')
+const container = document.querySelector('.ret-side-box2')
+const container2 = document.querySelector('.ret-side-box')
+
 const scenario = document.querySelector('.scenario')
 
 const trueSize = (angle, length, trueDis, half, meas) => {
@@ -61,7 +63,9 @@ const returnOfInvestment = (totalYearSave, investment, type) => {
 		result += ((result/100) * percent)
 
 		}
-		container.innerHTML = `In 25 years you will get a return of £${Math.round(saving)} <br>It will take ${returnPeriod} years to see a return in your investment`
+		container.innerHTML = `In 25 years you will get a return of £${Math.round(saving)}`
+		container2.innerHTML = `It will take ${returnPeriod} years to see a return in your investment`
+
 }
 
 quoteBtn.addEventListener('click', function() {
